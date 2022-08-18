@@ -104,7 +104,7 @@ The goal of this example is two-fold. First, show how to construct the tetrahedr
 
 # Documentation
 
-Unfortunately, no organized documentation document exists yet. However each function is documented thoroughly at its definition. However, a brief description of the two central functions `MomentSthOrder()` and `SSV()` follows.
+Unfortunately, no organized documentation document exists yet. However each function is documented thoroughly at its definition. A brief description of the two central functions `MomentSthOrder()` and `SSV()` follows.
 
 ## MomentSthOrder()
 
