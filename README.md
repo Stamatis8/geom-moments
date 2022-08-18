@@ -12,7 +12,7 @@
 
 # Usage
 
-Since this is a header-only library, one can simply move the files in `src` to a `path` which the compiler has access to. Then, in the file that the user wants to use this library, they can simply include the `geom_moments.hpp` header by `#include "path/geom_moments.hpp"`. (ie one can copy-paste the contents of `src` to the project folder and then simply `#include geom_moments.hpp`).
+Since this is a header-only library, one can simply move the files in `src` to a `path` which the compiler has access to. Then, in the file that the user wants to use this library, they can simply include the `geom_moments.hpp` header by `#include "path/geom_moments.hpp"`. (ie one can copy-paste the contents of `src` to their project folder and then simply `#include geom_moments.hpp`).
 
 # Overview
 
