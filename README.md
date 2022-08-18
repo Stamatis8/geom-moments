@@ -116,8 +116,8 @@ Unfortunately, no organized documentation document exists yet. However each func
 	double MomentSthOrder(std::vector<std::vector<std::vector<double>>> triangles,int i, int j, int k, int degree,
 			bool is_translation_invariant, bool is_scaling_invariant);
 	
-The `MomentSthOrder()` function calculates the `i,j,k` moment of order `i+j+k` of the input geometry, using the algorithm described in [1]. This geometric moment is defined as $\cal{G}_{ijk} = \int_V x^iy^jz^k dV$
-This algorithm allows for approximation of $\cal{G}_{ijk}$, by first expressing it explicitly as a power series in some constant $\lamda$ and then truncating the series at the `degree + 1` term. It should be noted that if `degree = i+j+k`, then the result is exact
+The `MomentSthOrder()` function calculates the `i,j,k` moment of order `i+j+k` of the input geometry, using the algorithm described in [1]. This geometric moment is defined as $G_{ijk} = \int_V x^iy^jz^k dV$.
+This algorithm allows for approximation of $G_{ijk}$, by first expressing it explicitly as a power series in some constant $\lambda$ (for the mesh special case) and then truncating the series at the `degree + 1` term. It should be noted that if `degree = i+j+k`, then the result is exact
 Finally, the `is_translation_invariant` and `is_scaling_invariant` parameter specify whether to calculate the standard moment (both false), the translation invariant moment and or the scaling invariant moment. Details can be found in [2]
 
 ## SSV()
