@@ -20,7 +20,7 @@ This library is centered around the `MomentSthOrder()` function which computes t
 
 ## Simple Example
 
-The goal of this example is two-fold. First, show how to construct the tetrahedron with vertices $(1,0,0)$, $(0,1,0)$, $(0,0,1)$, $(0,0,0)$ in `std::vector` format and then how t calculate its volume. The second goal is to demonstrate how to import STL files and calculate the geometry centroid.
+The goal of this example is two-fold. First, show how to construct the tetrahedron with vertices $(1,0,0)$, $(0,1,0)$, $(0,0,1)$, $(0,0,0)$ in `std::vector` format and then how to calculate its volume. The second goal is to demonstrate how to import STL files and calculate the geometry centroid.
 
 	#include <vector>
 	#include <iostream>
