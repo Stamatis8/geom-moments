@@ -104,7 +104,7 @@ The goal of this example is two-fold. First, show how to construct the tetrahedr
 
 # Documentation
 
-Unfortunately, no organized documentation document exists yet. However each function is documented thoroughly at its definition. A brief description of the two central functions `MomentSthOrder()` and `SSV()` follows.
+Unfortunately, no organized documentation document exists yet. However each function is documented thoroughly at its definition. A brief description of the central function `MomentSthOrder()` follows.
 
 ## MomentSthOrder()
 
@@ -120,19 +120,9 @@ The `MomentSthOrder()` function calculates the `i,j,k` moment of order `i+j+k` o
 This algorithm allows for approximation of $G_{ijk}$, by first expressing it explicitly as a power series in some constant $\lambda$ (for the mesh special case) and then truncating the series at the `degree + 1` term. It should be noted that if `degree = i+j+k`, then the result is exact
 Finally, the `is_translation_invariant` and `is_scaling_invariant` parameter specify whether to calculate the standard moment (both false), the translation invariant moment and or the scaling invariant moment. Details can be found in [2]
 
-## SSV()
-	
-	// Accepts geometry as STL file
-	std::vector<double> SSV(std::string filename, int order);
-	
-	// Accepts geometry as std::vector Object
-	std::vector<double> SSV(std::vector<std::vector<std::vector<double>>> triangles, int order);
-
-The `SSV()` function stands for *Shape Signature Vector* and is defined in [2]. It is a vector containing all moments of the input geometry up to order s. These moments are the translation and scaling invariant forms of the geometric moment described above. There are a couple of conventions about SSV() that should be noted. Firstly, the $0^{th}$ order moment which is the volume, if scaling invariant, is by definition always equal to 1. So for the volume, the standard moment is used. Further, all $1^{st}$ order moments are by definition equal to zero if the moment is translation invariant and therefore are ignored. This is because the first order moments divided by the volume equal the centroid of the geometry, which in turn if translation invariant, is centered.
-
 ## Geometry as a std::vector Object
 
-Both `SSV()` and `MomentSthOrder()` can accept the geometry as a `std::vector<std::vector<std::vector<double>>> triangles` object. The way this container is formatted is the follows:
+`MomentSthOrder()` can accept the geometry as a `std::vector<std::vector<std::vector<double>>> triangles` object. The way this container is formatted is the follows:
 
 - `triagles[i]` is the $i^{th}$ triangle
 - `triangles[i][j]` is the $j^{th}$ vertex of the $i^{th}$ triangle
@@ -142,5 +132,3 @@ Both `SSV()` and `MomentSthOrder()` can accept the geometry as a `std::vector<st
 # References
 
 1. Efficient 3D Geometric and Zernike moments computation from unstructured surface meshes J. M. Pozo, M. C. Villa-Uriol, A. F. Frangi, Senior Member, IEEE
-
-2. Geometric Moment-Dependent Global Sensitivity Analysis without Simulation Data: Application to Ship Hull Form Optimisation, Shahroz Khan, Panagiotis Kaklis, Andrea Serani, Matteo Diez
