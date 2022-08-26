@@ -12,7 +12,7 @@
 
 # Usage
 
-Since this is a header-only library, one can simply move the files in `src` to a `path` which the compiler has access to. Then, in the file that the user wants to use this library, they can simply include the `geom_moments.hpp` header by `#include "path/geom_moments.hpp"`. (ie one can copy-past the contents of `src` to the project folder and then simply `#include geom_moments.hpp`).
+Since this is a header-only library, one can simply move the files in `src` to a `path` which the compiler has access to. Then, in the file that the user wants to use this library, they can simply include the `geom_moments.hpp` header by `#include "path/geom_moments.hpp"`. (ie one can copy-paste the contents of `src` to their project folder and then simply `#include geom_moments.hpp`).
 
 # Overview
 
@@ -20,7 +20,7 @@ This library is centered around the `MomentSthOrder()` function which computes t
 
 ## Simple Example
 
-The goal of this example is two-fold. First, show how to construct the tetrahedron with vertices $(1,0,0)$, $(0,1,0)$, $(0,0,1)$, $(0,0,0)$ in `std::vector` format and then how t calculate its volume. The second goal is to demonstrate how to import STL files and calculate the geometry centroid.
+The goal of this example is two-fold. First, show how to construct the tetrahedron with vertices $(1,0,0)$, $(0,1,0)$, $(0,0,1)$, $(0,0,0)$ in `std::vector` format and then how to calculate its volume. The second goal is to demonstrate how to import STL files and calculate the geometry centroid.
 
 	#include <vector>
 	#include <iostream>
@@ -104,7 +104,7 @@ The goal of this example is two-fold. First, show how to construct the tetrahedr
 
 # Documentation
 
-Unfortunately, no organized documentation document exists yet. However each function is documented thoroughly at its definition. However, a brief description of the two central functions `MomentSthOrder()` and `SSV()` follows.
+Unfortunately, no organized documentation document exists yet. However each function is documented thoroughly at its definition. A brief description of the two central functions `MomentSthOrder()` and `SSV()` follows.
 
 ## MomentSthOrder()
 
@@ -116,8 +116,8 @@ Unfortunately, no organized documentation document exists yet. However each func
 	double MomentSthOrder(std::vector<std::vector<std::vector<double>>> triangles,int i, int j, int k, int degree,
 			bool is_translation_invariant, bool is_scaling_invariant);
 	
-The `MomentSthOrder()` function calculates the `i,j,k` moment of order `i+j+k` of the input geometry, using the algorithm described in [1]. This geometric moment is defined as $$\cal{G}_{ijk} = \int_V x^iy^jz^k dV$$
-This algorithm allows for approximation of $\cal{G}_{ijk}$, by first expressing it explicitly as a power series in some constant $\lamda$ and then truncating the series at the `degree + 1` term. It should be noted that if `degree = i+j+k`, then the result is exact
+The `MomentSthOrder()` function calculates the `i,j,k` moment of order `i+j+k` of the input geometry, using the algorithm described in [1]. This geometric moment is defined as $G_{ijk} = \int_V x^iy^jz^k dV$.
+This algorithm allows for approximation of $G_{ijk}$, by first expressing it explicitly as a power series in some constant $\lambda$ (for the mesh special case) and then truncating the series at the `degree + 1` term. It should be noted that if `degree = i+j+k`, then the result is exact
 Finally, the `is_translation_invariant` and `is_scaling_invariant` parameter specify whether to calculate the standard moment (both false), the translation invariant moment and or the scaling invariant moment. Details can be found in [2]
 
 ## SSV()
