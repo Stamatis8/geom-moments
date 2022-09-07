@@ -72,7 +72,8 @@ int main(){
 	// however in this specific case it does not matter, because the 1st order terms
 	// always vanish. Nevertheless be sure to set degree = i + j + k for higher orders
 	
-	std::cout << "( "<<Cx<< " , "<<Cy<< " , "<<Cz<< " ) \n";
+	std::cout << "Volume of geometry.stl: " << V << std::endl;
+	std::cout << "Centroid of geometry.stl: " << "( "<<Cx<< " , "<<Cy<< " , "<<Cz<< " ) \n";
 	
 	return 0;
 }

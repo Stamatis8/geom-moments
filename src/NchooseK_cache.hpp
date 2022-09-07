@@ -10,8 +10,8 @@ struct NchooseK_cache{
 		- throughout the program execution **in the scope that NchooseK is initialized at** , more and more values are calculated and included in nk
 		- let M = nk.size. All elements nk.at(i).at(j), for i = 0,...,M-1 are calculated
 	*/
-	
-	int get(int n,int k){
+
+	double get(double n,double k){
 		/*
 			Description: checks if (n,k) is calculated in nk. If it is calculated in nk, then nk.at(n).at(k) is returned.
 				If it is not calculated then nk.size() - 1 <  n. Then, all values nk.at(i) for i = nk.size() to n are
