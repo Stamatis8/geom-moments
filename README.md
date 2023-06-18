@@ -4,7 +4,7 @@
 - header-only library 
 - STL file import supported
 
-# Dependancies
+# Dependencies
 
 - Standard Library
 
@@ -16,7 +16,7 @@ Since this is a header-only library, one can simply move the files in `src` to a
 
 # Overview
 
-This library is centered around the `MomentSthOrder()` function which computes the  $(i+j+k) = s^{th}$ order moment for the input geometry. The input geometry is a trianglulated mesh, which as of now can be in two formats, either as a .STL file or as a vector of depth three (see below). We will now demonstate a simple example.
+This library is centered around the `MomentSthOrder()` function which computes the  $(i+j+k) = s^{th}$ order moment for the input geometry. The input geometry is a triangulated mesh, which as of now can be in two formats, either as a .STL file or as a vector of depth three (see below). We will now demonstrate a simple example.
 
 ## Simple Example
 
@@ -126,7 +126,7 @@ Finally, the `is_translation_invariant` and `is_scaling_invariant` parameter spe
 
 - `triagles[i]` is the $i^{th}$ triangle
 - `triangles[i][j]` is the $j^{th}$ vertex of the $i^{th}$ triangle
-- `triangles[i][j][k]` is the $k^{th}$ coodinate of the $j^{th}$ vertex of the $i^{th}$ triangle
+- `triangles[i][j][k]` is the $k^{th}$ coordinate of the $j^{th}$ vertex of the $i^{th}$ triangle
 
 
 # References
